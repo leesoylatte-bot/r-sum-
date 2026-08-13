@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAHYEON LEE | Game Policy & Regulatory Affairs</title>
+<meta name="description" content="이다현 | Game Policy, Regulatory Affairs, Government Relations, Legal & Investigation Risk">
+<style>
+:root{
+  --bg:#07101f;
+  --bg2:#0a1628;
+  --panel:#0f1d32;
+  --panel2:#122540;
+  --text:#f6f9ff;
+  --muted:#9eb0c8;
+  --blue:#4aa3ff;
+  --cyan:#58e0ff;
+  --violet:#8c7cff;
+  --line:rgba(148,177,214,.18);
+  --white:#fff;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--text);
+  font-family:Inter,Pretendard,"Noto Sans KR","Apple SD Gothic Neo",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 82% 8%,rgba(74,163,255,.18),transparent 28%),
+    radial-gradient(circle at 15% 38%,rgba(88,224,255,.08),transparent 24%),
+    linear-gradient(180deg,var(--bg) 0%,#081425 55%,#07101f 100%);
+  line-height:1.65;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(7,16,31,.82);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.navin{max-width:var(--max);margin:0 auto;padding:15px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:14px;font-weight:900;letter-spacing:.08em}
+.logo span{color:var(--cyan)}
+.links{display:flex;gap:20px;flex-wrap:wrap}
+.links a{font-size:13px;color:var(--muted);transition:.2s}
+.links a:hover{color:var(--cyan)}
+
+.hero{min-height:88vh;display:flex;align-items:center;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:56px;align-items:center;padding:80px 0}
+.kicker{font-size:13px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px}
+h1{font-size:clamp(48px,7vw,86px);line-height:.98;letter-spacing:-.055em;margin:0 0 28px}
+.gradient{
+  background:linear-gradient(90deg,#fff 0%,#b9dcff 52%,#5be0ff 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.lead{font-size:19px;color:#c7d5e8;max-width:850px;margin:0}
+.lead strong{color:#fff}
+.identity{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;color:var(--muted);font-size:14px}
+.identity strong{color:#fff}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:30px}
+.tag{
+  padding:8px 12px;border-radius:999px;border:1px solid rgba(88,224,255,.24);
+  color:#ccecff;background:rgba(74,163,255,.07);font-size:12px;font-weight:800
+}
+.hero-card{
+  border:1px solid rgba(88,224,255,.22);
+  background:linear-gradient(180deg,rgba(18,37,64,.9),rgba(12,27,47,.92));
+  border-radius:22px;padding:28px;box-shadow:0 22px 60px rgba(0,0,0,.28)
+}
+.hero-card .label{font-size:11px;color:var(--cyan);font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.hero-card h3{font-size:24px;margin:10px 0 16px}
+.flow{display:grid;gap:10px}
+.flow div{
+  padding:12px 14px;border-left:3px solid var(--blue);background:rgba(255,255,255,.03);
+  color:#c6d5e8;font-size:13px
+}
+.flow b{color:#fff}
+
+section{padding:82px 0;border-bottom:1px solid var(--line)}
+.section-head{display:grid;grid-template-columns:240px 1fr;gap:40px;margin-bottom:34px}
+.section-head h2{font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--cyan);margin:0}
+.section-head .big{font-size:31px;line-height:1.3;letter-spacing:-.035em;font-weight:850;margin:0}
+
+.core-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.core{
+  position:relative;overflow:hidden;border:1px solid var(--line);border-radius:18px;padding:23px;
+  background:linear-gradient(180deg,var(--panel),rgba(15,29,50,.75))
+}
+.core::after{content:"";position:absolute;right:-50px;top:-50px;width:110px;height:110px;border-radius:50%;background:rgba(74,163,255,.07)}
+.core .no{color:var(--cyan);font-weight:900;font-size:12px}
+.core h3{font-size:17px;margin:16px 0 10px;line-height:1.35}
+.core p{font-size:13px;color:var(--muted);margin:0}
+
+.game-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.game-card{
+  border:1px solid rgba(74,163,255,.25);border-radius:20px;padding:26px;
+  background:linear-gradient(135deg,rgba(74,163,255,.13),rgba(15,29,50,.75))
+}
+.game-card.esports{background:linear-gradient(135deg,rgba(88,224,255,.10),rgba(15,29,50,.75))}
+.game-top{font-size:12px;font-weight:900;letter-spacing:.1em;color:var(--cyan);margin-bottom:9px}
+.game-card h3{font-size:23px;margin:0 0 12px}
+.game-card p{color:#b9c9dc;margin:0}
+.game-subgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.mini{border:1px solid var(--line);border-radius:16px;padding:20px;background:rgba(255,255,255,.025)}
+.mini h4{margin:0 0 8px;font-size:15px}
+.mini p{margin:0;color:var(--muted);font-size:13px}
+
+.timeline{display:grid;gap:18px}
+.xp{
+  display:grid;grid-template-columns:250px 1fr;border:1px solid var(--line);border-radius:20px;
+  overflow:hidden;background:rgba(15,29,50,.72)
+}
+.xp-left{padding:25px;background:linear-gradient(180deg,rgba(74,163,255,.10),rgba(255,255,255,.01));border-right:1px solid var(--line)}
+.xp-left h3{font-size:22px;margin:0 0 7px}
+.xp-left p{margin:0;color:var(--muted);font-size:13px}
+.xp-body{padding:24px}
+.meta{display:grid;grid-template-columns:105px 1fr;gap:8px 15px;padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+.meta b{font-size:12px;color:var(--cyan)}
+.meta span{font-size:13px;color:#d1dcec}
+.impacts{display:grid;gap:14px}
+.impact{padding-bottom:14px;border-bottom:1px dashed var(--line)}
+.impact:last-child{border-bottom:0;padding-bottom:0}
+.impact h4{margin:0 0 6px;font-size:16px}
+.impact p{margin:0;color:var(--muted);font-size:13px}
+.badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:7px}
+.badge{font-size:10px;font-weight:900;color:var(--cyan);border:1px solid rgba(88,224,255,.22);padding:3px 7px;border-radius:999px}
+
+.neowiz{
+  border:1px solid rgba(140,124,255,.28);background:linear-gradient(135deg,rgba(140,124,255,.10),rgba(74,163,255,.06));
+  border-radius:22px;padding:28px
+}
+.neowiz h3{font-size:26px;margin:0 0 10px}
+.neowiz p{color:#c2cee0;margin:0}
+.plan-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
+.plan{border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:16px;padding:20px}
+.plan .pno{color:var(--violet);font-size:11px;font-weight:900}
+.plan h4{font-size:16px;margin:9px 0}
+.plan p{font-size:13px;color:var(--muted);margin:0}
+
+.edu{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.edu-card{border:1px solid var(--line);border-radius:18px;padding:22px;background:rgba(255,255,255,.025)}
+.edu-card .label{font-size:11px;color:var(--cyan);font-weight:900;text-transform:uppercase;letter-spacing:.1em}
+.edu-card h3{font-size:19px;margin:12px 0 6px}
+.edu-card p{color:var(--muted);margin:0;font-size:13px}
+
+.vision{padding:90px 0}
+.quote{
+  font-size:clamp(28px,4vw,50px);line-height:1.2;letter-spacing:-.04em;font-weight:900;max-width:1000px;margin:0
+}
+.quote span{color:var(--cyan)}
+.contact{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-top:45px;flex-wrap:wrap}
+.contact p{color:var(--muted);margin:0}
+.contact strong{color:#fff}
+.footer{padding:24px 0;color:#6f839d;font-size:12px;text-align:center}
+
+@media(max-width:900px){
+  .hero-grid,.section-head,.xp{grid-template-columns:1fr}
+  .core-grid{grid-template-columns:1fr 1fr}
+  .game-grid,.plan-grid,.edu{grid-template-columns:1fr}
+  .xp-left{border-right:0;border-bottom:1px solid var(--line)}
+  .links{display:none}
+}
+@media(max-width:560px){
+  .core-grid,.game-subgrid{grid-template-columns:1fr}
+  h1{font-size:48px}
+}
+@media print{
+  nav{display:none}
+  body{background:#fff;color:#111}
+  .hero,section{border-color:#ddd}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="navin">
+    <div class="logo">DAHYEON <span>LEE</span> / GAME POLICY</div>
+    <div class="links">
+      <a href="#profile">Profile</a>
+      <a href="#core">Core</a>
+      <a href="#game">Game & eSports</a>
+      <a href="#experience">Experience</a>
+      <a href="#neowiz">Contribution</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="profile">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">Game Policy · Regulatory Affairs · Legal Risk</div>
+      <h1><span class="gradient">게임산업의 정책·규제 변화를<br>네오위즈의 새로운 성장 기회로 이끌겠습니다.</span></h1>
+      <p class="lead">
+        검찰과 경기도의회에서 약 10년간 법률·정책 실무를 수행하며
+        <strong>정책·규제 분석, 입법 및 제도개선, 이해관계자 협업, 사법기관 실무</strong> 경험을 축적했습니다.
+        정책이 만들어지는 과정과 규제가 집행되는 과정을 모두 이해하는 경험을 바탕으로,
+        정책·규제 변화가 <strong>네오위즈의 IP와 서비스에 미치는 영향</strong>을 선제적으로 분석하고,
+        안정적인 글로벌 서비스와 지속 가능한 성장을 위한 대응방안으로 연결하겠습니다.
+      </p>
+      <div class="identity">
+        <strong>이다현 · DAHYEON LEE</strong>
+        <span>010-2088-9659</span>
+        <span>leedahyeon@kakao.com</span>
+      </div>
+      <div class="tags">
+        <span class="tag">Regulatory Affairs</span>
+        <span class="tag">Game & eSports Policy</span>
+        <span class="tag">Stakeholder Relations</span>
+        <span class="tag">Investigation Risk</span>
+        <span class="tag">Executive Reporting</span>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <div class="label">NEOWIZ POLICY FRAMEWORK</div>
+      <h3>정책·규제 변화를 IP와 서비스의 성장 전략으로 연결합니다.</h3>
+      <div class="flow">
+        <div><b>01 Policy Change</b><br>게임산업 법령·정책 변화 포착</div>
+        <div><b>02 IP &amp; Service Impact</b><br>네오위즈 IP·서비스 영향 분석</div>
+        <div><b>03 Risk Management</b><br>이용자·규제·사법 리스크 검토</div>
+        <div><b>04 Business Action</b><br>개발·사업·서비스 조직의 실행방안 제시</div>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<section id="core">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Core Experience</h2>
+      <p class="big">네오위즈에서 바로 활용할 수 있는 4가지 정책 실무 역량</p>
+    </div>
+    <div class="core-grid">
+      <div class="core"><div class="no">01 / REGULATORY</div><h3>Regulatory Risk Analysis</h3><p>법령·정책 변화의 필요성, 영향, 이해관계자 효과, 실제 집행 가능성을 종합적으로 분석하고 대응방안을 구조화합니다.</p></div>
+      <div class="core"><div class="no">02 / LEGAL RISK</div><h3>Investigation Risk</h3><p>검찰 수사·공판 실무를 기반으로 사실관계, 증거자료, 법률 쟁점과 사법기관 대응 프로세스를 이해합니다.</p></div>
+      <div class="core"><div class="no">03 / RELATIONS</div><h3>Stakeholder Communication</h3><p>지방자치단체, 공공기관, 전문가, 현장 이해관계자의 요구를 분석하고 수용 가능한 정책 대안을 조정합니다.</p></div>
+      <div class="core"><div class="no">04 / REPORTING</div><h3>Executive Reporting</h3><p>복잡한 정책·법률 이슈를 핵심 쟁점, 사업 영향, 리스크, 대응 옵션의 형태로 전환합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="game">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Game & eSports Policy</h2>
+      <p class="big">경기도 산업정책 현장에서 직접 다룬 게임·e스포츠 정책 경험</p>
+    </div>
+
+    <div class="game-grid">
+      <div class="game-card">
+        <div class="game-top">GAME POLICY</div>
+        <h3>경기도 게임산업 정책 및 규제 분석</h3>
+        <p>경기도 게임산업 관련 정책·사업·예산을 검토하고 산업 활성화와 이용자 보호 관점에서 주요 정책 현안을 분석했습니다. 게임산업 관련 법령 및 정책 동향을 검토하여 규제 변화가 경기도 게임기업과 이용자에게 미치는 영향과 정책적 개선방안을 검토했습니다.</p>
+      </div>
+      <div class="game-card esports">
+        <div class="game-top">ESPORTS POLICY</div>
+        <h3>경기도 e스포츠 산업 정책·사업 분석</h3>
+        <p>경기도 e스포츠 관련 정책·사업·예산 및 추진체계를 검토하고 산업 활성화와 저변 확대를 위한 정책 방향과 사업 운영 현황을 분석했습니다.</p>
+      </div>
+    </div>
+
+    <div class="game-subgrid">
+      <div class="mini"><h4>Regulatory Impact</h4><p>게임산업 규제 변화가 기업과 이용자에게 미치는 영향을 정책·산업 관점에서 분석합니다.</p></div>
+      <div class="mini"><h4>Industry Balance</h4><p>산업 경쟁력과 이용자 보호라는 두 정책 목적을 함께 고려해 실행 가능한 대안을 검토합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Professional Experience</h2>
+      <p class="big">정책이 만들어지는 현장과 규제가 집행되는 현장을 모두 경험했습니다.</p>
+    </div>
+
+    <div class="timeline">
+      <article class="xp">
+        <div class="xp-left">
+          <h3>경기도의회</h3>
+          <p>2023.05 ~ 현재</p>
+        </div>
+        <div class="xp-body">
+          <div class="meta">
+            <b>근무부서</b><span>경제노동위원회 / 여성가족평생교육위원회 / 의정지원과</span>
+            <b>담당업무</b><span>자치법규 제·개정, 법률·정책 검토, 정책·사업·예산 분석, 법령·제도개선 건의, 이해관계자 정책 협의</span>
+          </div>
+          <div class="impacts">
+            <div class="impact">
+              <div class="badges"><span class="badge">GAME POLICY</span><span class="badge">REGULATORY ANALYSIS</span></div>
+              <h4>경기도 게임산업 정책 및 규제 분석</h4>
+              <p>게임산업 관련 정책·사업·예산과 법령·정책 동향을 검토하고 기업 및 이용자에 미치는 영향과 개선방안을 분석.</p>
+            </div>
+            <div class="impact">
+              <div class="badges"><span class="badge">ESPORTS</span><span class="badge">INDUSTRY POLICY</span></div>
+              <h4>경기도 e스포츠 산업 정책·사업 분석</h4>
+              <p>e스포츠 산업 활성화, 사업 운영, 예산 및 추진체계를 검토하고 저변 확대를 위한 정책 방향 분석.</p>
+            </div>
+            <div class="impact">
+              <div class="badges"><span class="badge">POLICY ANALYSIS</span><span class="badge">REGULATORY AFFAIRS</span></div>
+              <h4>법령·정책 분석 및 제도개선</h4>
+              <p>국회·정부의 입법·정책 동향과 관련 법령을 분석하고 경기도 정책 및 산업 현장에 미치는 영향을 검토하여 대응방안 마련.</p>
+            </div>
+            <div class="impact">
+              <div class="badges"><span class="badge">STAKEHOLDER</span><span class="badge">COMMUNICATION</span></div>
+              <h4>공청회·토론회·정책간담회 및 이해관계자 조정</h4>
+              <p>지방자치단체, 공공기관, 전문가 및 현장 이해관계자의 다양한 의견을 수렴·조정하여 정책 대안과 제도 개선방안 마련 지원.</p>
+            </div>
+            <div class="impact">
+              <div class="badges"><span class="badge">EXECUTIVE REPORTING</span><span class="badge">DOCUMENTATION</span></div>
+              <h4>정책·법률 보고서 및 의사결정 자료 작성</h4>
+              <p>법률·정책 검토보고서, 정책질의서, 제도개선 건의서, 행정사무감사, 예·결산 및 현안 분석자료 작성.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="xp">
+        <div class="xp-left">
+          <h3>부천시의회</h3>
+          <p>2022.06 ~ 2023.05</p>
+        </div>
+        <div class="xp-body">
+          <div class="meta">
+            <b>담당업무</b><span>자치법규 및 정책 현안 조사·분석, 법률·정책 검토, 정책보고서 및 의사결정 지원자료 작성</span>
+          </div>
+          <div class="impact">
+            <h4>자치법규 및 주요 정책 현안 분석</h4>
+            <p>법령·정책자료와 현장 의견을 바탕으로 주요 쟁점을 구조화하고 정책 대안 및 검토자료를 작성.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="xp">
+        <div class="xp-left">
+          <h3>서울남부지방검찰청</h3>
+          <p>검찰실무관 · 약 6년</p>
+        </div>
+        <div class="xp-body">
+          <div class="meta">
+            <b>근무분야</b><span>금융조사부 / 공판부 / 형사부</span>
+            <b>담당업무</b><span>수사·공판 업무 지원, 사건기록 및 증거자료 관리, 판례·법률자료 조사, 형사사법절차 관련 실무 지원</span>
+          </div>
+          <div class="impacts">
+            <div class="impact"><h4>금융·경제범죄 수사 및 공판 지원</h4><p>복잡한 사건기록과 증거자료를 체계적으로 관리하고 핵심 사실관계와 법률적 쟁점을 파악하여 수사·공판 업무 지원.</p></div>
+            <div class="impact"><h4>사법기관 프로세스 및 Investigation Risk 이해</h4><p>수사·공판 단계별 업무 프로세스와 사법적 이슈 발생 시 필요한 자료관리·법률조사 체계를 실무적으로 경험.</p></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="neowiz">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Contribution Plan</h2>
+      <p class="big">네오위즈의 IP와 서비스 성장을 지원하는 Policy Business Partner</p>
+    </div>
+    <div class="neowiz">
+      <h3>IP와 서비스에 영향을 미치는 규제 변화를 “실행 가능한 정보”로 바꾸겠습니다.</h3>
+      <p>PC·콘솔·모바일·라이브 서비스 등 다양한 사업 구조를 이해하고, 규제 이슈가 발생한 이후 대응하는 것이 아니라 기획과 운영 단계부터 리스크를 함께 검토하는 협업 구조를 지향합니다.</p>
+      <div class="plan-grid">
+        <div class="plan"><div class="pno">01 / IP & SERVICE RISK</div><h4>IP·서비스별 정책 리스크 분석</h4><p>이용자 보호, 등급분류, 사후관리, 확률형 아이템, 소비자 분쟁 등 서비스와 직접 연결되는 이슈의 사업 영향을 분석합니다.</p></div>
+        <div class="plan"><div class="pno">02 / POLICY INTELLIGENCE</div><h4>정책 변화 → Business Impact</h4><p>입법·정책 변화를 단순 모니터링하지 않고 Risk Level과 Action Plan까지 연결해 사업부서의 의사결정을 지원합니다.</p></div>
+        <div class="plan"><div class="pno">03 / STAKEHOLDER</div><h4>대외 정책 커뮤니케이션</h4><p>국회·정부 부처·지방자치단체·게임물관리위원회·협단체·전문가 등 주요 이해관계자의 정책 방향을 파악하고 효과적인 대응을 지원합니다.</p></div>
+        <div class="plan"><div class="pno">04 / INVESTIGATION</div><h4>소비자 분쟁·사법기관 이슈 대응</h4><p>검찰 실무 경험을 활용하여 사실관계와 핵심 리스크를 신속하게 구조화하고 유관부서·외부 전문가와 대응방안을 마련합니다.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Education & Credentials</h2>
+      <p class="big">법학 기반의 정책·규제 실무 역량</p>
+    </div>
+    <div class="edu">
+      <div class="edu-card"><div class="label">Education</div><h3>국립순천대학교</h3><p>2007.03 ~ 2013.08<br>법학 · 학사</p></div>
+      <div class="edu-card"><div class="label">Certification</div><h3>자치입법전문가 1급</h3><p>입법·정책 실무 기반 전문 자격</p></div>
+      <div class="edu-card"><div class="label">Language</div><h3>English</h3><p>TOEIC 760<br>영어 회화 중급</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="vision" id="contact">
+  <div class="wrap">
+    <p class="quote">“규제가 무엇을 금지하는가”를 설명하는 사람이 아니라,<br><span>“규제 환경 안에서 사업이 무엇을 할 수 있는가”</span>를 제안하는 정책 전문가.</p>
+    <div class="contact">
+      <p>게임의 개발·사업·서비스 조직과 긴밀하게 협업하며<br>핵심 IP가 국내외 시장에서 안정적으로 성장할 수 있도록 지원하겠습니다.</p>
+      <p><strong>이다현 | DAHYEON LEE</strong><br>010-2088-9659<br>leedahyeon@kakao.com</p>
+    </div>
+  </div>
+</section>
+
+<div class="footer">GAME POLICY · REGULATORY AFFAIRS · LEGAL RISK</div>
+
+</body>
+</html>
