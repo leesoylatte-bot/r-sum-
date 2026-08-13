@@ -84,6 +84,9 @@ section{padding:82px 0;border-bottom:1px solid var(--line)}
 .section-head{display:grid;grid-template-columns:240px 1fr;gap:40px;margin-bottom:34px}
 .section-head h2{font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--cyan);margin:0}
 .section-head .big{font-size:31px;line-height:1.3;letter-spacing:-.035em;font-weight:850;margin:0}
+.experience-title{width:max-content;max-width:100%;font-size:clamp(23px,2.3vw,31px)!important}
+.experience-line{display:block;white-space:nowrap}
+
 
 .core-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .core{
@@ -152,6 +155,17 @@ section{padding:82px 0;border-bottom:1px solid var(--line)}
   font-size:clamp(28px,4vw,50px);line-height:1.2;letter-spacing:-.04em;font-weight:900;max-width:1000px;margin:0
 }
 .quote span{color:var(--cyan)}
+.vision-quote{width:max-content;max-width:100%;font-size:clamp(20px,3.15vw,43px)}
+.vision-quote .quote-line{display:block;white-space:nowrap;color:inherit}
+.vision-quote .quote-line > span{color:var(--cyan)}
+.vision-quote .quote-emphasis{
+  font-size:1.48em;
+  line-height:1.12;
+  font-weight:900;
+  letter-spacing:-.055em;
+  color:var(--cyan);
+  margin-top:.10em;
+}
 .contact{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-top:45px;flex-wrap:wrap}
 .contact p{color:var(--muted);margin:0}
 .contact strong{color:#fff}
@@ -171,6 +185,16 @@ section{padding:82px 0;border-bottom:1px solid var(--line)}
 }
 @media(max-width:380px){
   h1{font-size:clamp(22px,7vw,28px)}
+}
+@media(max-width:700px){
+  .experience-title{font-size:clamp(17px,4.5vw,25px)!important;line-height:1.3}
+
+  .vision-quote{font-size:clamp(15px,4.25vw,28px);line-height:1.25;letter-spacing:-.045em}
+}
+@media(max-width:400px){
+  .experience-title{font-size:clamp(14px,3.9vw,18px)!important}
+
+  .vision-quote{font-size:clamp(13px,3.95vw,18px)}
 }
 @media print{
   nav{display:none}
@@ -284,7 +308,10 @@ section{padding:82px 0;border-bottom:1px solid var(--line)}
   <div class="wrap">
     <div class="section-head">
       <h2>Professional Experience</h2>
-      <p class="big">정책이 만들어지는 현장과 규제가 집행되는 현장을 모두 경험했습니다.</p>
+      <p class="big experience-title">
+        <span class="experience-line">정책이 만들어지는 현장과 규제가 집행되는 현장을</span>
+        <span class="experience-line">모두 경험했습니다.</span>
+      </p>
     </div>
 
     <div class="timeline">
@@ -374,10 +401,10 @@ section{padding:82px 0;border-bottom:1px solid var(--line)}
       <h3>IP와 서비스에 영향을 미치는 규제 변화를 “실행 가능한 정보”로 바꾸겠습니다.</h3>
       <p>PC·콘솔·모바일·라이브 서비스 등 다양한 사업 구조를 이해하고, 규제 이슈가 발생한 이후 대응하는 것이 아니라 기획과 운영 단계부터 리스크를 함께 검토하는 협업 구조를 지향합니다.</p>
       <div class="plan-grid">
-        <div class="plan"><div class="pno">01 / IP & SERVICE RISK</div><h4>IP·서비스별 정책 리스크 분석</h4><p>이용자 보호, 등급분류, 사후관리, 확률형 아이템, 소비자 분쟁 등 서비스와 직접 연결되는 이슈의 사업 영향을 분석합니다.</p></div>
-        <div class="plan"><div class="pno">02 / POLICY INTELLIGENCE</div><h4>정책 변화 → Business Impact</h4><p>입법·정책 변화를 단순 모니터링하지 않고 Risk Level과 Action Plan까지 연결해 사업부서의 의사결정을 지원합니다.</p></div>
-        <div class="plan"><div class="pno">03 / STAKEHOLDER</div><h4>대외 정책 커뮤니케이션</h4><p>국회·정부 부처·지방자치단체·게임물관리위원회·협단체·전문가 등 주요 이해관계자의 정책 방향을 파악하고 효과적인 대응을 지원합니다.</p></div>
-        <div class="plan"><div class="pno">04 / INVESTIGATION</div><h4>소비자 분쟁·사법기관 이슈 대응</h4><p>검찰 실무 경험을 활용하여 사실관계와 핵심 리스크를 신속하게 구조화하고 유관부서·외부 전문가와 대응방안을 마련합니다.</p></div>
+        <div class="plan"><div class="pno">01 / IP & SERVICE RISK</div><h4>IP·서비스별 정책 리스크 분석</h4><p>이용자 보호, 등급분류, 사후관리, 확률형 아이템, 소비자 분쟁 등 서비스와 직접 연결되는 이슈가 네오위즈의 IP와 사업에 미치는 영향을 분석하겠습니다.</p></div>
+        <div class="plan"><div class="pno">02 / POLICY INTELLIGENCE</div><h4>정책 변화 → Business Impact</h4><p>입법·정책 변화를 단순 모니터링하는 데 그치지 않고 Risk Level과 Action Plan까지 연결하여 사업부서의 신속한 의사결정을 지원하겠습니다.</p></div>
+        <div class="plan"><div class="pno">03 / STAKEHOLDER</div><h4>대외 정책 커뮤니케이션</h4><p>국회·정부 부처·지방자치단체·게임물관리위원회·협·단체·전문가 등 주요 이해관계자의 정책 방향과 움직임을 파악하고 네오위즈의 입장이 효과적으로 전달될 수 있도록 대응하겠습니다.</p></div>
+        <div class="plan"><div class="pno">04 / INVESTIGATION</div><h4>소비자 분쟁·사법기관 이슈 대응</h4><p>검찰 실무 경험을 활용하여 사실관계와 핵심 리스크를 신속하게 파악하고 유관부서 및 외부 전문가와 협업하여 대응방안을 마련하겠습니다.</p></div>
       </div>
     </div>
   </div>
@@ -399,7 +426,11 @@ section{padding:82px 0;border-bottom:1px solid var(--line)}
 
 <section class="vision" id="contact">
   <div class="wrap">
-    <p class="quote">“규제가 무엇을 금지하는가”를 설명하는 사람이 아니라,<br><span>“규제 환경 안에서 사업이 무엇을 할 수 있는가”</span>를 제안하는 정책 전문가.</p>
+    <p class="quote vision-quote">
+        <span class="quote-line">“규제가 무엇을 금지하는가”를 설명하는 사람이 아니라,</span>
+        <span class="quote-line"><span>“규제 환경 안에서 사업이 무엇을 할 수 있는가”</span>를 제안하는</span>
+        <span class="quote-line quote-emphasis">정책 전문가</span>
+      </p>
     <div class="contact">
       <p>게임의 개발·사업·서비스 조직과 긴밀하게 협업하며<br>핵심 IP가 국내외 시장에서 안정적으로 성장할 수 있도록 지원하겠습니다.</p>
       <p><strong>이다현 | DAHYEON LEE</strong><br>010-2088-9659<br>leedahyeon@kakao.com</p>
